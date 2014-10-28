@@ -10,6 +10,7 @@ use Rack::Flash, :sweep => true
 
 require './models'
 
+configure(:development) {set :database, "sqlite:///blog.sqlite3"}
 
 def current_user
 	if session[:user_id]
